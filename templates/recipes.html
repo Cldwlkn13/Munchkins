@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+<body>
+    {% for recipe in recipes %}
+        <h2>{{recipe.title}}</h2><br>
+        {{recipe.desc}}<br>
+        {{recipe.portions}}<br>
+        <p><strong>Ingredients</strong></p>
+        {% for k,v in recipe.ingredients.items() %} 
+            {% for k,v in v.items() %}
+               <span>----------- {{k}}: {{v}}</span><br>
+            {% endfor %}<br><br>
+        {% endfor %}<br>
+        <p><strong>Steps</strong></p>
+        {% for item in recipe.steps.values() %}
+            {% for k,v in item.items() %}
+                <span>---------- {{k}}: {{v}}</span><br>
+            {% endfor %}<br>
+        {% endfor %}<br>
+    {% endfor %}
+</body>
+</html>
