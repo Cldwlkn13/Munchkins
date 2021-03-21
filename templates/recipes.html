@@ -13,7 +13,11 @@
         <p><strong>Steps</strong></p>
         {% for item in recipe.steps.values() %}
             {% for k,v in item.items() %}
-                <span>---------- {{k}}: {{v}}</span><br>
+                {% if k == 'time' %}
+                    <span>---------- {{k}}: {{v}} mins</span><br>
+                {% else %}
+                    <span>---------- {{k}}: {{v}}</span><br>
+                {% endif%}
             {% endfor %}<br>
         {% endfor %}<br>
     {% endfor %}
