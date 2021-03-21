@@ -4,6 +4,16 @@
     flex-direction: column;
   }
 
+  .flashes h5 {
+    line-height: 2;
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    border: 2px solid lime;
+    border-radius: 5px;
+    padding: 10px;
+   }   
+
   main {
     flex: 1 0 auto;
   }
