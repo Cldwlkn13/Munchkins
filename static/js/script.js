@@ -1,6 +1,8 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
 
+    //$('.modal-trigger').leanModal();
+
     $.get('static/text/countries.txt', function (data) {
         var lines = data.split('\n');
         $.each(lines, function (k, v) {
