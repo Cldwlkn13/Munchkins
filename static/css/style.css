@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
 }
 
 .flashes h5 {
@@ -34,7 +38,32 @@ main {
   background-image: url("../images/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+}
+
+.opacity-layer {
+    background-color: rgba(3, 0, 0, 0.6);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#home-actions {
+    margin-top: 100px;
+}
+
+#home-actions-col {
+    padding: 40px;
+}
+
+#home-tag {
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+
+.home-btn {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /*welcomeanimation*/
