@@ -2,10 +2,9 @@
 
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   font-family: "Lato", sans-serif;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 .flashes h5 {
@@ -34,180 +33,91 @@ main {
   display: none;
 }
 
-#home {
-  background-image: url("../images/home.jpg");
+#home-bg-lowres {
+  background-image: url(../images/home.jpg);
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+#home-bg-highres {
+    display: none;
 }
 
 .opacity-layer {
     background-color: rgba(3, 0, 0, 0.6);
-    background-repeat: repeat;
-    background-size: cover;
     height: 100vh;
+    padding-top: 100px;
 }
 
-#home-actions {
-    margin-top: 100px;
-}
-
-#home-actions-col {
+#home-actions-col, #home-data-col {
     padding: 40px;
+}
+
+#home-data-col {
+    text-align: right;
 }
 
 #home-tag {
     font-size: 48px;
     margin-bottom: 25px;
+    text-shadow: 2px 2px #000;
+    font-weight: 900;
 }
-
 
 .home-btn {
     width: 100%;
     margin-bottom: 20px;
+    background-color: #e65100;
 }
 
-/*welcomeanimation*/
-
-body.welcome {
-  background: #004d40;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
+.home-btn:hover {
+    background-color: #ef6c00;
 }
 
-.welcome .splash {
-  height: 0px;
-  padding: 0px;
-  border: 130em solid #64ffda;
-  position: fixed;
-  left: 50%;
-  top: 100%;
-  display: block;
-  box-sizing: initial;
-  overflow: hidden;
-
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
-    borderRadius 0.2s 2.3s linear forwards;
+#show-recipe-card {
+    margin-right: 5px;
 }
 
-.welcome #welcome {
-  background: #004d40;
-  width: 56px;
-  height: 56px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  overflow: hidden;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
-    moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
-    moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
-    materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards,
-    hide 2s 2.9s ease forwards;
+#recipe-content {
+    display: none;
 }
 
-/* moveIn */
-.welcome header,
-.welcome a.btn {
-  opacity: 0;
-  animation: moveIn 2s 3.1s ease forwards;
+
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
-@keyframes init {
-  0% {
-    width: 0px;
-    height: 0px;
-  }
-  100% {
-    width: 56px;
-    height: 56px;
-    margin-top: 0px;
-    opacity: 1;
-  }
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
-@keyframes puff {
-  0% {
-    top: 100%;
-    height: 0px;
-    padding: 0px;
-  }
-  100% {
-    top: 50%;
-    height: 100%;
-    padding: 0px 100%;
-  }
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
-@keyframes borderRadius {
-  0% {
-    border-radius: 50%;
-  }
-  100% {
-    border-radius: 0px;
-  }
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
-@keyframes moveDown {
-  0% {
-    top: 50%;
-  }
-  50% {
-    top: 40%;
-  }
-  100% {
-    top: 100%;
-  }
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
-@keyframes moveUp {
-  0% {
-    background: #004d40;
-    top: 100%;
-  }
-  50% {
-    top: 40%;
-  }
-  100% {
-    top: 50%;
-    background: #64ffda;
-  }
-}
 
-@keyframes materia {
-  0% {
-    background: #64ffda;
-  }
-  50% {
-    background: #64ffda;
-    top: 26px;
-  }
-  100% {
-    background: #004d40;
-    width: 100%;
-    height: 64px;
-    border-radius: 0px;
-    top: 26px;
-  }
-}
-
-@keyframes moveIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+@media only screen and (max-width: 601px) {
+    .opacity-layer {
+        padding-top: 0px;
+    }
 }

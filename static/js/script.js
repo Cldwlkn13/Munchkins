@@ -1,8 +1,6 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
 
-    //$('.modal-trigger').leanModal();
-
     $.get('static/text/countries.txt', function (data) {
         var lines = data.split('\n');
         $.each(lines, function (k, v) {
@@ -12,6 +10,10 @@ $(document).ready(function () {
     });
 
     $('select').formSelect();
+
+    $('#show-recipe-card').on("click", function(){
+        $('#recipe-content').toggle();
+    });
 
     $("#password_confirm").on("focusout", function (e) {
         if (!validatePassword()) {
