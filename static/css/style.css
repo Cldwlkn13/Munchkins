@@ -126,10 +126,17 @@ main {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 601px) {
+    #home-bg-lowres {
+        height: auto;
+    }
     .opacity-layer {
         padding-top: 0px;
+        height: auto;
     }
     #home-info-col {
         text-align: left;
+    }
+    #home-bg-lowres {
+        background-repeat: repeat;
     }
 }
