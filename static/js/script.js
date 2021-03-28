@@ -15,7 +15,17 @@ $(document).ready(function () {
         $('#recipe-content').toggle();
     });
 
-    $("#password_confirm").on("focusout", function (e) {
+    function slideAndFadeIn(elem, animateLength, timeout) {
+        setTimeout(function() {
+            $(elem).animate({ opacity: 1 }, animateLength);
+        }, timeout);
+    }
+
+    slideAndFadeIn("#home-info-text-1", 2000, 0);
+    slideAndFadeIn("#home-info-text-2", 2000, 1500);
+    slideAndFadeIn("#home-info-text-3", 2000, 3000);
+
+    $("#password_confirm").on("focusout", function () {
         if (!validatePassword()) {
             $(this).removeClass("valid").addClass("invalid");
             $("#lbl_password_confirm").text("Passwords do not match")

@@ -38,11 +38,11 @@ main {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: fadeIn ease 3s;
+  /*animation: fadeIn ease 3s;
     -webkit-animation: fadeIn ease 3s;
     -moz-animation: fadeIn ease 3s;
     -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;*/
 }
 
 #home-bg-highres {
@@ -55,11 +55,11 @@ main {
     padding-top: 100px;
 }
 
-#home-actions-col, #home-data-col {
+#home-actions-col, #home-info-col {
     padding: 40px;
 }
 
-#home-data-col {
+#home-info-col {
     text-align: right;
 }
 
@@ -88,7 +88,16 @@ main {
     display: none;
 }
 
+/*.home-info-text-col {
+    margin-bottom: 80px;
+}*/
 
+.home-info-text {
+    font-size : 24px;
+    font-weight: 900;
+    text-shadow: 1px 1px #000; 
+    opacity: 0; 
+}
 
 @keyframes fadeIn {
 0% {opacity:0;}
@@ -115,9 +124,12 @@ main {
 100% {opacity:1;}
 }
 
-
+/* MEDIA QUERIES */
 @media only screen and (max-width: 601px) {
     .opacity-layer {
         padding-top: 0px;
+    }
+    #home-info-col {
+        text-align: left;
     }
 }

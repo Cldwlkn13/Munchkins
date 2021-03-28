@@ -42,7 +42,8 @@
                         </div>
                     </div>
                     <a class="btn-floating red" id="show-recipe-card"><i class="material-icons">add</i></a>
-                    <span class="lime-text text-lighten-5" style="line-height: 2.5;" id="sample-tag">Sample recipe card</span>
+                    <span class="lime-text text-lighten-5" style="line-height: 2.5;" id="sample-tag">View a sample recipe
+                        card</span>
                     <div class="card" id="recipe-content">
                         <div class="card-content">
                             <p>I am a very simple card. I am good at containing small bits of information. I am
@@ -62,8 +63,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m5" id="home-data-col">
-                    
+                <div class="col s12 m3 push-m2 l2 push-l3" id="home-info-col">
+                    <div class="row">
+                        <div class="col s12 home-info-text-col teal-text text-lighten-5">
+                            <p class="home-info-text" id="home-info-text-1">Great recipe ideas for weaning your little munchkins!</p>
+                        </div>
+                        <div class="col s12 home-info-text-col purple-text text-lighten-5">
+                            <p class="home-info-text" id="home-info-text-2">Save your favourite recipes to your profile!</p>
+                        </div>
+                        <div class="col s12 home-info-text-col blue-text text-lighten-4">
+                            <p class="home-info-text" id="home-info-text-3">Add your own best recipes with our easy to use recipe builder!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,6 +84,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.custom-animations.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
